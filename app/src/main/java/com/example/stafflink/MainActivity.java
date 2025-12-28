@@ -2,15 +2,10 @@ package com.example.stafflink;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,21 +20,35 @@ public class MainActivity extends AppCompatActivity {
         companyButton = findViewById(R.id.companyButton);
         employeeButton = findViewById(R.id.employeeButton);
 
-        companyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this, Admin_page.class);
+        companyButton.setOnClickListener(v -> {
+
+            // 🔥 Check if admin is already logged in
+            boolean isLoggedIn = getSharedPreferences("ADMIN_SESSION", MODE_PRIVATE)
+                    .getBoolean("LOGGED_IN", false);
+
+            String adminNode = getSharedPreferences("ADMIN_SESSION", MODE_PRIVATE)
+                    .getString("adminNode", null);
+
+            String companyCode = getSharedPreferences("ADMIN_SESSION", MODE_PRIVATE)
+                    .getString("COMPANY_CODE", null);
+
+            if (isLoggedIn && adminNode != null && companyCode != null) {
+
+                // 🔥 Directly go to dashboard
+                Intent intent = new Intent(MainActivity.this, AdminDashboardActivity.class);
+                intent.putExtra("adminNode", adminNode);
+                intent.putExtra("COMPANY_CODE", companyCode);
                 startActivity(intent);
+                finish();
+
+            } else {
+                // New login
+                startActivity(new Intent(MainActivity.this, Admin_page.class));
             }
         });
 
-        employeeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this, Employee_page.class);
-                startActivity(intent);
-            }
+        employeeButton.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, Employee_page.class));
         });
-
     }
 }

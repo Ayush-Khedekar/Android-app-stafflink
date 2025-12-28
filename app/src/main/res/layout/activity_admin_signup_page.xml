@@ -27,7 +27,7 @@ android:background="@drawable/admin_page_gradient">
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:layout_marginTop="10dp"
-        android:text="Admin Signup"
+        android:text="Company Registration"
         android:textStyle="bold"
         android:textSize="18sp" />
 
@@ -40,35 +40,12 @@ android:background="@drawable/admin_page_gradient">
         android:layout_marginTop="10dp">
 
         <!-- Email field with floating label -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            app:boxBackgroundMode="outline"
-            app:boxStrokeColor="#90CAF9"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusBottomEnd="10dp"
-            android:fontFamily="@font/poppins"
-            android:layout_marginBottom="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailInput"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:inputType="textEmailAddress"
-                android:textSize="15sp"
-                android:fontFamily="@font/poppins"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/conatctLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contact"
+            android:hint="Login Id"
             app:boxBackgroundMode="outline"
             app:boxStrokeColor="#90CAF9"
             app:boxCornerRadiusTopStart="10dp"
@@ -81,8 +58,8 @@ android:background="@drawable/admin_page_gradient">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/contactInput"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:inputType="phone"
+                android:layout_height="wrap_content"
+                android:inputType="text"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppins"/>
 
@@ -105,7 +82,7 @@ android:background="@drawable/admin_page_gradient">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordInput"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppins"/>
@@ -115,7 +92,7 @@ android:background="@drawable/admin_page_gradient">
     </LinearLayout>
 
     <Button
-        android:id="@+id/employeeButton"
+        android:id="@+id/signupButton"
         style="@android:style/Animation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -126,7 +103,7 @@ android:background="@drawable/admin_page_gradient">
         android:background="@drawable/button_design"
         android:layout_marginTop="30dp"
         android:layout_marginHorizontal="5dp"
-        app:backgroundTint="@color/green"
+        app:backgroundTint="@color/darkgreen"
         android:layout_marginBottom="-20dp"/>
 
     <LinearLayout

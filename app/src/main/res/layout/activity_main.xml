@@ -51,28 +51,28 @@
             android:layout_gravity="center"
             android:layout_marginBottom="-60dp"
             android:layout_marginTop="30dp">
-        <Button
-            android:id="@+id/companyButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="For Company"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginEnd="35dp"
-            app:backgroundTint="@color/blue"
-            android:background="@drawable/button_design" />
+            <Button
+                android:id="@+id/companyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="For Company"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginEnd="35dp"
+                app:backgroundTint="@color/darkgreen"
+                android:background="@drawable/button_design" />
 
-        <Button
-        android:id="@+id/employeeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:backgroundTint="@color/blue"
-        android:text="For Employees"
-        android:background="@drawable/button_design"/>
+            <Button
+                android:id="@+id/employeeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:backgroundTint="@color/darkgreen"
+                android:text="For Employees"
+                android:background="@drawable/button_design"/>
         </LinearLayout>
 
     </LinearLayout>
